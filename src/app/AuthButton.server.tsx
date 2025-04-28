@@ -11,11 +11,11 @@ export default async function AuthButtonServer() {
       name: session.user.name,
       email: session.user.email,
     };
-
-    return (
-      <SessionProvider basePath={BASE_URL} session={session}>
-        <AuthButtonClient />
-      </SessionProvider>
-    );
   }
+
+  return (
+    <SessionProvider basePath={BASE_URL} session={session}>
+      <AuthButtonClient />
+    </SessionProvider>
+  );
 }

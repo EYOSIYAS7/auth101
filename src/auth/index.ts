@@ -1,10 +1,11 @@
 import NextAuth, { User, NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-
+import GitHub from "next-auth/providers/github";
 export const BASE_URL = "api/auth";
 
 const authOptions: NextAuthConfig = {
   providers: [
+    GitHub,
     Credentials({
       name: "Credentials",
       credentials: {
